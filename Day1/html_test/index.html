@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action onsubmit="alert('제출 완료!')">
+            First name :<br />
+            <input type="text" required />
+            <br />
+            Last name :<br />
+            <input type="text" required />
+            <br />
+            Email :<br />
+            <input type="text" required />
+            <br />
+            Gender :
+            <input type="radio" name="gender" value="Male" /> Male
+            <input type="radio" name="gender" value="Female" /> Female
+            <br />
+            Favorite :
+            <input type="checkbox" name="favorite1" value="html" />HTML
+            <input type="checkbox" name="favorite2" value="java" />JAVA
+            <input
+                type="checkbox"
+                name="favorite3"
+                value="javaScript"
+            />JavaScript
+            <br />
+            Browser :
+            <select name="browser">
+                <option value="chrome">Chrome</option>
+                <option value="safari">Safari</option>
+                <option value="opera">Opera</option>
+                <option value="fireFox">FireFox</option>
+                <option value="ie">IE</option>
+                <option value="edge">Edge</option>
+            </select>
+            <br />
+            Birthday :
+            <input type="date" placeholder="yyyy-mm-dd" />
+            <br />
+            <input type="submit" />
+        </form>
+    </body>
+</html>
