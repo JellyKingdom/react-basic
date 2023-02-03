@@ -1,19 +1,16 @@
 import React from "react";
 
-function Child(){
-  return <div>안녕하세요 자식입니다!</div>;
-}
+function App() {
 
-function Mommy(){
-  return <Child />;
-}
-
-function GrandFa(){
-  return <Mommy />;
-}
-
-function App(){
-  return <GrandFa/>;
+    const a = 3;
+    const b =10;
+    return (
+        <>
+            <div>
+                안녕하세요 {a + b}입니다.
+            </div>
+        </>
+    );
 }
 
 export default App;
