@@ -1,17 +1,19 @@
-import "App.css";
+import React from "react";
 
-//자식 컴포넌트
-function Child() {
-    return <div>나는 자식입니다.</div>;
+function Child(){
+  return <div>안녕하세요 자식입니다!</div>;
 }
 
-//부모 컴포넌트
-function App() {
-    return (
-        <>
-          <Child />
-        </>
-    );
+function Mommy(){
+  return <Child />;
+}
+
+function GrandFa(){
+  return <Mommy />;
+}
+
+function App(){
+  return <GrandFa/>;
 }
 
 export default App;
