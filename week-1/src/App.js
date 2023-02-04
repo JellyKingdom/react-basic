@@ -1,19 +1,13 @@
 import React from "react";
+import Layout from "Layout";
 
 function App() {
     
     return (
-      <>
-      <div>
-        <User>안녕하세요!</User>
-      </div>
-      </>
+      <Layout>
+        <div>App 컴포넌트에서 보낸 값 입니다.</div>
+      </Layout>
     );
-}
-
-function User(props){
-  console.log(props);
-  return <div></div>;
 }
 
 export default App;
