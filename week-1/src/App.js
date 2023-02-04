@@ -3,18 +3,20 @@ import Layout from "Layout";
 
 function App() {
 
-    const [name, setName] = useState('김할아버지');
+    const[fruit, setFruit] =useState("");
+
     return (
       <>
       <Layout>
         <div>STATE에 대한 이야기입니다.</div>
       </Layout>
       <div>
-        {name}<br/>
-        <button onClick={function(){
-          setName('박할아버지');
-        }}>클릭</button>
+        과일 : <input value={fruit} onChange={(e) => {
+          // console.log(e.target.value);
+          setFruit(e.target.value);
+        }}/>
       </div>
+      {fruit}
       </>
     );
 }
