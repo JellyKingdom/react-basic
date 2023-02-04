@@ -8,9 +8,8 @@ function Child(props){
 
 //부모 -> 자식 정보를 전달했다!
 function Mother(props){
-  const grandpa = props.grandFatherName;
   const name = '엄마이름';
-  return <Child grandFatherName={grandpa} motherName={name}/>;
+  return <Child grandFatherName={props.grandFatherName} motherName={name}/>;
 }
 
 function GrandFather(){
