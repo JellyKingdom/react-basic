@@ -11,7 +11,9 @@ function App() {
       </Layout>
       <div>
         {name}<br/>
-        <button>클릭</button>
+        <button onClick={function(){
+          setName('박할아버지');
+        }}>클릭</button>
       </div>
       </>
     );
