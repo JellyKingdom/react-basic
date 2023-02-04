@@ -7,8 +7,14 @@ function App() {
     // UI를 바꾸기 위해서다!
     
     // hook
-    const [state,setState] = useState('initial Value');
+    // const [state,setState] = useState('initial Value');
     //--> [state, setState]
+
+    const [count, setCount] = useState(0);
+    const [todoList, setTodoList] = useState([]);
+
+    // useState, useEffect, useContext, useMemo
+    // useDispatch, useSele~~
 
     return (
       <Layout>
