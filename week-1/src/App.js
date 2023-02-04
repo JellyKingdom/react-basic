@@ -1,18 +1,19 @@
 import React from "react";
 
 function App() {
-    const name = '상위컴포넌트 이름';
+    
     return (
       <>
       <div>
-        <User propsname={name}/>
+        <User>안녕하세요!</User>
       </div>
       </>
     );
 }
 
 function User(props){
-  return <div> {props.propsname}의 하위 컴포넌트</div>
+  console.log(props);
+  return <div></div>;
 }
 
 export default App;
