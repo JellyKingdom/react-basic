@@ -8,4 +8,8 @@ function Child({age, name, Children}) {
     return <div>Child</div>;
 }
 
+Child.defaultProps={
+    age : '기본 나이',
+}
+
 export default Child;

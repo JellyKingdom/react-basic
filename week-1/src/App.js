@@ -6,7 +6,7 @@ function App() {
     const name = 'test';
     return (
       <Layout>
-        <Child age={32} name={name}>이름</Child>
+        <Child  name={name}>이름</Child>
       </Layout>
     );
 }
