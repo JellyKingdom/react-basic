@@ -16,4 +16,10 @@ let obj2 = {
     name: 'kim',
 }
 
+console.log('obj1과 obj2가 일치하나요?');
 console.log(obj1 === obj2); //false
+
+
+//데이터를 수정하는 경우
+number = 2;
+console.log(number);    //메모리주소가 변경, 2 나온다.
