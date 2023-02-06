@@ -8,8 +8,9 @@
 
 .vegetable {
   
+  display: flex;
   width: 45px;
-  
+  justify-content: center;
   border: 1px solid green;
   border-radius: 10px;
   padding: 30px;
