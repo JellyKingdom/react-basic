@@ -18,6 +18,12 @@ function App() {
         console.log(obj);
         setObj(obj);
         // 콘솔은 찍히지만 렌더링되지는 않는다! 새로운 객체를 만들어줘야한다.
+        
+        const obj2 = {...obj};
+        console.log(obj2);
+        obj2.name = "jiyunHan";
+        setObj(obj2);
+
       }}>
       클릭!!</button>
 
