@@ -9,7 +9,7 @@ function Layout(props) {
                 border: "1px solid red",
             }}
         >
-            항상 출력되는 머릿글입니다.
+            React practice!
         </header>
         {props.children}
         </>
