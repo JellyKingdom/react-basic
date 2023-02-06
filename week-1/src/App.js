@@ -2,28 +2,31 @@ import React, { useState } from "react";
 import Layout from "Layout";
 
 function App() {
-
-    const [id,setId] = useState("");
-    const [pw, setPw] = useState("");
+  const [obj, setObj] = useState({
+    name: "jiyun",
+    age: 32,
+  });
 
     return (
       <>
       <Layout>
-        <div>STATE에 대한 이야기입니다.</div>
+        <div>불변성 강의 중!</div>
       </Layout>
-      <div>
-        아이디 : <input type="text" value={id} onInput={(e) => {
-          setId(e.target.value);
-          }}/>
-        <br/>
-        비밀번호 : <input type="password" value={pw} onChange={(e) => {
-          setPw(e.target.value);
-        }}/>
-      </div>
-
+      <div>{obj.name}</div>
       <button onClick={()=>{
-        alert(`입력하신 아이디는 ${id}, 비밀번호는 ${pw}입니다.`);
-      }}>로그인</button>
+        obj.name = "jiyunHan"
+        console.log(obj);
+        setObj(obj);
+        // 콘솔은 찍히지만 렌더링되지는 않는다! 새로운 객체를 만들어줘야한다.
+        
+        const obj2 = {...obj};
+        console.log(obj2);
+        obj2.name = "jiyunHan";
+        setObj(obj2);
+
+      }}>
+      클릭!!</button>
+
       </>
     );
 }
