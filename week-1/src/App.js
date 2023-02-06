@@ -8,17 +8,17 @@ function App() {
       <>
       <Layout>
         <div>Counter App</div>
-      </Layout>
+      </Layout> 
       
         <div>{counter}</div>
       
         <button onClick={() => {
-          counter = counter + 1;
-          setCounter(counter);
+          let newCounter = counter + 1;
+          setCounter(newCounter);
         }}>+1</button>
         <button onClick={() => {
-          counter = counter - 1;
-          setCounter(counter);
+          newCounter = counter - 1;
+          setCounter(newCounter);
         }}>-1</button>
       
     
