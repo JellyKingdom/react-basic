@@ -20,7 +20,7 @@ function App() {
               {
                 users.map(function(item){
                   return (
-                    <div className="component-style">{item.age} - {item.name}</div>
+                    <div key={item.id} className="component-style">{item.age} - {item.name}</div>
                   )
                 })
               }
