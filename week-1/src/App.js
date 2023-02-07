@@ -1,31 +1,24 @@
 import React, { useState } from "react";
 import Layout from "Layout";
+import 'App.css';
 
 function App() {
-  const [obj, setObj] = useState({
-    name: "jiyun",
-    age: 32,
-  });
-
     return (
       <>
       <Layout>
-        <div>불변성 강의 중!</div>
-      </Layout>
-      <div>{obj.name}</div>
-      <button onClick={()=>{
-        obj.name = "jiyunHan"
-        console.log(obj);
-        setObj(obj);
-        // 콘솔은 찍히지만 렌더링되지는 않는다! 새로운 객체를 만들어줘야한다.
+        <div>Style project</div>
         
-        const obj2 = {...obj};
-        console.log(obj2);
-        obj2.name = "jiyunHan";
-        setObj(obj2);
+      </Layout> 
 
-      }}>
-      클릭!!</button>
+      <div className="container">
+          <div className="vegetable">감자</div>
+          <div className="vegetable">고구마</div>
+          <div className="vegetable">오이</div>
+          <div className="vegetable">가지</div>
+          <div className="vegetable">옥수수</div>
+        </div>
+      
+    
 
       </>
     );
