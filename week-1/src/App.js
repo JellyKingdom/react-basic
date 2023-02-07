@@ -66,7 +66,7 @@ function App() {
               나이 : <input 
               value={age}
               onChange={ageChangeHandler}/>
-              < Button addButtonHandler={addButtonHandler}/>
+              <Button Button addButtonHandler={addButtonHandler}> 추가</Button>
               </div>
             <div className="app-style">
               {
@@ -88,10 +88,10 @@ function App() {
     );
 }
 
-const Button = ({addButtonHandler}) => {
+const Button = ({addButtonHandler, children}) => {
   return <button
   onClick={addButtonHandler}
-  >추가</button>
+  >{children }</button>
 }
 
 const User = ({item, removeButtonHandler}) => {
