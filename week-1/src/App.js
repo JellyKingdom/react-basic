@@ -15,20 +15,13 @@ function App() {
 
       <div className="container">
         {
-          vegi.map(function(item){
+          vegi.filter(function(item){
+            return item !== "오이";
+          })
+          .map(function(item){
             return <div className="vegetable">{item}</div>
           })
         }
-        {
-          vegi.map((item) => {
-            return <div className="vegetable">{item}</div>
-          })
-        }
-          {/* <div className="vegetable">감자</div>
-          <div className="vegetable">고구마</div>
-          <div className="vegetable">오이</div>
-          <div className="vegetable">가지</div>
-          <div className="vegetable">옥수수</div> */}
       </div>
       
     
@@ -36,5 +29,7 @@ function App() {
       </>
     );
 }
+
+// <div className="vegetable">{item}</div>
 
 export default App;
