@@ -22,6 +22,27 @@ function App() {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
 
+  const nameChangeHandler = (e) => {
+    setName(e.target.value);
+  }
+
+  const ageChangeHandler = (e) => {
+    setAge(e.target.value);
+  }
+
+  const addButtonHandler = () => {
+    //1. 새로운 형태의 { id: 1, age: 30, name: "송중기" }를 만든다.
+    //2. 위 객체를 배열에 더한다.
+
+    const newUsers = {
+      id: users.length + 1,
+      age,  //age : age로 써도 됨
+      name : name,
+    }
+    //setUsers([...users, newUsers]) means 원래 있던 users를 푼 다음, new Users를 다시 넣은 것! 불변성 유지를 위해!
+    setUsers([...users,newUsers]);
+  }
+
     return (
         <>
             <Layout>
@@ -31,14 +52,13 @@ function App() {
               <div>
               이름 : <input 
               value={name} 
-              onChange={(e) => {
-                setName(e.target.value);
-              }}/>
+              onChange={nameChangeHandler} />
               나이 : <input 
               value={age}
-              onChange={function(e){
-                setAge(e.target.value);
-              }}/>
+              onChange={ageChangeHandler}/>
+              <button
+              onClick={addButtonHandler}
+              >추가</button>
               </div>
             <div className="app-style">
               {
