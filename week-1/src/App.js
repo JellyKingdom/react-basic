@@ -19,6 +19,11 @@ function App() {
             return <div className="vegetable">{item}</div>
           })
         }
+        {
+          vegi.map((item) => {
+            return <div className="vegetable">{item}</div>
+          })
+        }
           {/* <div className="vegetable">감자</div>
           <div className="vegetable">고구마</div>
           <div className="vegetable">오이</div>
