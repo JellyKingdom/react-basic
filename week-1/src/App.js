@@ -16,7 +16,13 @@ function App() {
                 <div>component practice</div>
             </Layout>
 
-            
+            <div className="app-style">
+              <div className="component-style">{users[0].age} - {users[0].name}</div>
+              <div className="component-style">{users[1].age} - {users[1].name}</div>
+              <div className="component-style">{users[2].age} - {users[2].name}</div>
+              <div className="component-style">{users[3].age} - {users[3].name}</div>
+            </div>
+
         </>
     );
 }
