@@ -30,18 +30,28 @@ function App() {
     setAge(e.target.value);
   }
 
+  //추가 버튼
   const addButtonHandler = () => {
     //1. 새로운 형태의 { id: 1, age: 30, name: "송중기" }를 만든다.
     //2. 위 객체를 배열에 더한다.
 
-    const newUsers = {
-      id: users.length + 1,
-      age,  //age : age로 써도 됨
-      name : name,
-    }
+  const newUsers = {
+    id: users.length + 1,
+    age,  //age : age로 써도 됨
+    name : name,
+  }
     //setUsers([...users, newUsers]) means 원래 있던 users를 푼 다음, new Users를 다시 넣은 것! 불변성 유지를 위해!
     setUsers([...users,newUsers]);
   }
+
+  //삭제버튼(x)
+  const removeButtonHandler = (id) => {
+    // users.filter(user => user.id !== 어떤값)
+    const newUsers = users.filter(user => user.id !== id);
+    setUsers(newUsers);
+
+  }
+
 
     return (
         <>
@@ -64,7 +74,10 @@ function App() {
               {
                 users.map(function(item){
                   return (
-                    <div key={item.id} className="component-style">{item.age} - {item.name}</div>
+                    <div key={item.id} className="component-style">{item.age} - {item.name}
+                    <button onClick={() =>removeButtonHandler(item.id)}>x</button>
+                    {/* 매개변수를 넘겨줄 경우 앞에 () => 로 꼭 감싸줄 것!*/}
+                    </div>
                   )
                 })
               }
