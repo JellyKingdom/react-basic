@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Layout from "Layout";
 import "App.css";
+import Button from "./components/Button";
+import User from "components/User";
 
 function App() {
     // const users = [
@@ -88,21 +90,6 @@ function App() {
     );
 }
 
-const Button = ({addButtonHandler, children}) => {
-  return <button
-  onClick={addButtonHandler}
-  >{children }</button>
-}
 
-const User = ({item, removeButtonHandler}) => {
-  return(
-    <div key={item.id} className="component-style">{item.age} - {item.name}
-      <button onClick={() =>removeButtonHandler(item.id)}>x</button>
-      {/* 매개변수를 넘겨줄 경우 앞에 () => 로 꼭 감싸줄 것!*/}
-    </div>
-  )
-}
-
-// <div className="vegetable">{item}</div>
 
 export default App;
