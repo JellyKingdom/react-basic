@@ -3,6 +3,9 @@ import Layout from "Layout";
 import 'App.css';
 
 function App() {
+
+    const vegi = ['감자','고구마','오이','가지','옥수수'];
+
     return (
       <>
       <Layout>
@@ -11,12 +14,17 @@ function App() {
       </Layout> 
 
       <div className="container">
-          <div className="vegetable">감자</div>
+        {
+          vegi.map(function(item){
+            return <div className="vegetable">{item}</div>
+          })
+        }
+          {/* <div className="vegetable">감자</div>
           <div className="vegetable">고구마</div>
           <div className="vegetable">오이</div>
           <div className="vegetable">가지</div>
-          <div className="vegetable">옥수수</div>
-        </div>
+          <div className="vegetable">옥수수</div> */}
+      </div>
       
     
 
