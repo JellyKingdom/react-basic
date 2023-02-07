@@ -19,12 +19,27 @@ function App() {
       { id: 4, age: 29, name: "구교환" },
   ]);
 
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+
     return (
         <>
             <Layout>
                 <div>component practice</div>
             </Layout>
-
+            <div>
+              <div>
+              이름 : <input 
+              value={name} 
+              onChange={(e) => {
+                setName(e.target.value);
+              }}/>
+              나이 : <input 
+              value={age}
+              onChange={function(e){
+                setAge(e.target.value);
+              }}/>
+              </div>
             <div className="app-style">
               {
                 users.map(function(item){
@@ -34,11 +49,10 @@ function App() {
                 })
               }
 
-              {/* <div className="component-style">{users[0].age} - {users[0].name}</div>
-              <div className="component-style">{users[1].age} - {users[1].name}</div>
-              <div className="component-style">{users[2].age} - {users[2].name}</div>
-              <div className="component-style">{users[3].age} - {users[3].name}</div> */}
             </div>
+
+            </div>
+
 
         </>
     );
